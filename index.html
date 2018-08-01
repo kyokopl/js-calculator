@@ -1,45 +1,49 @@
 <!DOCTYPE html>
 <html>
+    <head>
+        <meta charset="utf-8" />
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <script src="calculator.js"></script>
+    </head>
     <body>
         <title>Purere Tatai</title>
-
-        <link rel="stylesheet" type="text/css" href="style.css">
-
         <div class="calc-container">
-            <div calss="calculator">
+            <div class="calculator">
                 <h1 class="name">Purere Tatai</h1>
-                <input class="screen" type="text">
+                <input id="screen" type="text" value="" />
+
                 <div class="row">
-                    <button class="ctrl">AC</button> 
-                    <button class="ctrl">CE</button> 
-                    <button>%</button>
-                    <button>/</button>
+                    <button class="ctrl" id="ac" onclick="allClear()">AC</button>
+                    <button class="ctrl" id="c" onclick="clearScreen()">C</button>
+                    <button id="%" onclick="maths('%')">%</button>
+                    <button id="divide" onclick="maths('/')">÷</button>
                 </div>
                 <div class="row">
-                    <button>7</button> 
-                    <button>8</button> 
-                    <button>9</button>
-                    <button>x</button>
+                    <button value="7" onclick="clickNum(7)">7</button>
+                    <button value="8" onclick="clickNum(8)">8</button>
+                    <button value="9" onclick="clickNum(9)">9</button>
+                    <button id="multiply" onclick="maths('*')">X</button>
                 </div>
                 <div class="row">
-                    <button>4</button> 
-                    <button>5</button> 
-                    <button>6</button>
-                    <button>-</button>
+                    <button value="4" onclick="clickNum(4)">4</button>
+                    <button value="5" onclick="clickNum(5)">5</button>
+                    <button value+"6" onclick="clickNum(6)">6</button>
+                    <button id="minus" onclick="maths('-')">-</button>
                 </div>
                 <div class="row">
-                    <button>1</button> 
-                    <button>2</button> 
-                    <button>3</button>
-                    <button class="tall">+</button>
+                    <button value="1" onclick="clickNum(1)">1</button>
+                    <button value="2" onclick="clickNum(2)">2</button>
+                    <button value="3" onclick="clickNum(3)">3</button>
+                    <button class="tall" id="plus" onclick="maths('+')">+</button>
                 </div>
                 <div class="row">
-                    <button>0</button> 
-                    <button>.</button> 
-                    <button>=</button>
+                    <button value="0" onclick="clickNum(0)">0</button>
+                    <button value="." onclick="clickNum('.')">.</button>
+                    <button id="equal" onclick="equal()">=</button>
                 </div>
             </div>
 
         </div>  
     </body>
+
 </html>
