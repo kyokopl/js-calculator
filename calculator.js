@@ -1,8 +1,8 @@
-var screenDisplay = '';
+var display = '';
 var temp = '';
 
 function clickNum(i) { 
-    checkForNewCalculation();
+    checkCalc();
     displayNum(i);
 }
 
@@ -13,8 +13,8 @@ function displayNum(i) {
 }
 
 // Check for new calculation
-function checkForNewCalculation() {
-    screenDisplay = document.getElementById("screen").value;
+function checkCalc() {
+    display = document.getElementById("screen").value;
     if (document.getElementById("screen").classList.contains("result")){
         allClear();
         document.getElementById("screen").classList.remove("result");
@@ -23,23 +23,23 @@ function checkForNewCalculation() {
 
 // Clear for C
 function clearScreen() {
-    screenDisplay = "";
-    document.getElementById("screen").value = screenDisplay;
+    display = "";
+    document.getElementById("screen").value = display;
 }
 
 // Clear for AC
 function allClear() {
-    screenDisplay = "";
-    document.getElementById("screen").value = screenDisplay;
+    display = "";
+    document.getElementById("screen").value = display;
     temp ="";
 }
 
 // Performing calculations
 function maths(i) {
-    screenDisplay =document.getElementById("screen");
+    display =document.getElementById("screen");
     if (document.getElementById("screen").classList.contains("result")){
-        temp = screenDisplay.value;
-        screenDisplay.classList.remove("result");
+        temp = display.value;
+        display.classList.remove("result");
     };
     clearScreen();
     temp += i;
@@ -47,8 +47,8 @@ function maths(i) {
 
 // Result 
 function equal() {
-    screenDisplay = document.getElementById("screen");
+    display = document.getElementById("screen");
     temp = eval(temp);
     document.getElementById("screen").value = temp;
-    screenDisplay.classList.add("result");
+    display.classList.add("result");
 }
