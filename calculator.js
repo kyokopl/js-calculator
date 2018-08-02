@@ -1,5 +1,5 @@
-var display = '';
-var temp = '';
+var display = "";
+var temp = "";
 
 function clickNum(i) { 
     displayNum(i);
@@ -21,7 +21,7 @@ function clearScreen() {
 function allClear() {
     display = "";
     document.getElementById("screen").value = display;
-    temp ="";
+    temp = "";
 }
 
 // Performing calculations
