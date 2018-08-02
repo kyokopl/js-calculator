@@ -1,8 +1,7 @@
-var display = '';
-var temp = '';
+var display = "";
+var temp = "";
 
 function clickNum(i) { 
-    checkCalc();
     displayNum(i);
 }
 
@@ -10,15 +9,6 @@ function clickNum(i) {
 function displayNum(i) {
     document.getElementById("screen").value += i;
     temp += i;
-}
-
-// Check for new calculation
-function checkCalc() {
-    display = document.getElementById("screen").value;
-    if (document.getElementById("screen").classList.contains("result")){
-        allClear();
-        document.getElementById("screen").classList.remove("result");
-    };
 }
 
 // Clear for C
@@ -31,7 +21,7 @@ function clearScreen() {
 function allClear() {
     display = "";
     document.getElementById("screen").value = display;
-    temp ="";
+    temp = "";
 }
 
 // Performing calculations
